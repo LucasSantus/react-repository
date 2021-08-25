@@ -1,10 +1,12 @@
 <h1 align="center">React Repository</h1>
 
 <p align="center">
- <a href="#sobre">Sobre</a> &nbsp;|&nbsp;
- <a href="#porque">Por Que</a> &nbsp;|&nbsp;
- <a href="#autor">Autor</a> &nbsp;|&nbsp;
- <a href="#license">Licença</a>
+	<a href="#sobre">Sobre</a> &nbsp;|&nbsp;
+	<a href="#porque">Por Que</a> &nbsp;|&nbsp;
+	<a href="#tecnologias">Técnologias</a> &nbsp;|&nbsp;
+	<a href="#instalando">Instalando</a> &nbsp;|&nbsp;
+	<a href="#autor">Autor</a> &nbsp;|&nbsp;
+	<a href="#license">Licença</a>
 </p>
 
 <h3 id="sobre">:information_source: Sobre</h3>
