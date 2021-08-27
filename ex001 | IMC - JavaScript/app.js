@@ -1,6 +1,3 @@
 const dados_json = require("./pessoas.json")
 
-dados_json.pessoas.forEach(pessoa => {
-    let IMC = (pessoa.peso / (pessoa.altura * pessoa.altura))
-    console.log(`${pessoa.nome}\nIMC: ${IMC}\n`)
-})
+for(let pessoa of dados_json.pessoas) console.log(`${pessoa.nome}\nIMC: ${(pessoa.peso / (pessoa.altura * pessoa.altura))}\n`)
