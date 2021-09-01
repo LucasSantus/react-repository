@@ -11,5 +11,5 @@ dados = pessoas.filter((pessoa)=>{
 
 // Gravando novo arquivo json.
 fs.writeFile('./new_pessoas.json', JSON.stringify(dados), err => {
-    err ? console.log('Error writing file', err) : console.log('Successfully wrote file');
+    err ? console.log('Falha ao gravar novo arquivo.') : console.log('Sucesso ao gravar novo arquivo.');
 })
