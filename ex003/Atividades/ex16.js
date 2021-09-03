@@ -1,7 +1,10 @@
-const pessoas = require('./Pessoas.json');
+// Importando pessoas.
+const pessoas = require('../pessoas.json');
 
-let Peso80 = pessoas.filter((pessoa) => {
+// Recuperando dados.
+let dados = pessoas.filter((pessoa) => {
     return pessoa.peso > 80;
 })
 
-console.log(Peso80.length)
+// Printando.
+console.log(`Existem ${dados.length} pessoas acima dos 80Kg.`)

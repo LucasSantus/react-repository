@@ -1,6 +1,10 @@
-const pessoas = require('./Pessoas.json');
+// Importando pessoas.
+const pessoas = require('../pessoas.json');
 
-let Sangue = pessoas.filter((pessoa) => {
+// Recuperando dados.
+let dados = pessoas.filter((pessoa) => {
     return pessoa.tipo_sanguineo == "O+" ;
 })
-console.log(Sangue.length)
+
+// Printando.
+dados > 0 ? console.log(`Contém ${dados.length} pessoas com O+`) : console.log(`Não Contém pessoas com O+`);

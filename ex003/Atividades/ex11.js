@@ -1,11 +1,18 @@
-const pessoas = require('./Pessoas.json');
+// Importando pessoas.
+const pessoas = require('../pessoas.json');
 
+// Declarando objeto.
+let objeto = {
+    pessoa: "", altura: 0,
+}
 
-let MaiorAltura = 0
-pessoas.forEach(i => {
-    if(MaiorAltura<parseFloat(i.altura)){
-        MaiorAltura=parseFloat(i.altura)
+// Verificando maior altura.
+pessoas.forEach(pessoa => {
+    if(objeto.altura < parseFloat(pessoa.altura)){
+        objeto.pessoa = pessoa.nome;
+        objeto.altura = parseFloat(pessoa.altura);
     }
-})
+});
 
-console.log(MaiorAltura)
+// Printando.
+console.log(`${objeto.pessoa} é o mais alto com ${objeto.altura}.`);

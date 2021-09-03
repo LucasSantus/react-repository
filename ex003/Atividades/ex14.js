@@ -1,11 +1,19 @@
-const pessoas = require('./Pessoas.json');
+// Importando pessoas.
+const pessoas = require('../pessoas.json');
 
-let MaisNova = 1000000
-pessoas.forEach(i => {
+// Declarando objeto.
+let objeto = {
+    pessoa: "", idade: 0,
+}
 
-    if(MaisNova>i.idade){
-        MaisNova=i.idade
+// Verificando menor idade.
+pessoas.forEach(pessoa => {
+    if(objeto.idade == 0) objeto.idade = parseFloat(pessoa.idade);
+    if(objeto.idade >= parseFloat(pessoa.idade)){
+        objeto.pessoa = pessoa.nome;
+        objeto.idade = parseFloat(pessoa.idade);
     }
-})
+});
 
-console.log(MaisNova)
+// Printando.
+console.log(`${objeto.pessoa} é o mais novo(a) com ${objeto.idade} anos.`);

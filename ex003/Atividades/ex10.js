@@ -1,13 +1,10 @@
-const pessoas = require('./Pessoas.json');
+// Importando pessoas.
+const pessoas = require('../pessoas.json');
 
-let Sangue = pessoas.filter((pessoa) => {
-    return pessoa.tipo_sanguineo == "O+" ;
-})
+// Recuperando dados.
+const dados = pessoas.reduce((soma, item) => {
+    return soma + parseFloat(item.altura);
+}, 0);
 
-let TotalAltura = 0
-
-Sangue.forEach(i => {
-    TotalAltura += parseFloat(i.altura)
-})
-
-console.log(TotalAltura/Sangue.length)
+// Printando.
+console.log(`A altura média dessas pessoas é ${dados / pessoas.length}`);

@@ -1,15 +1,10 @@
-const pessoas = require('./Pessoas.json');
+// Importando pessoas.
+const pessoas = require('../pessoas.json');
 
-let Sangue = pessoas.filter((pessoa) => {
-    return pessoa.tipo_sanguineo == "O+" ;
-})
+// Recuperando dados.
+const dados = pessoas.reduce((soma, item) => {
+    return soma + item.idade;
+}, 0);
 
-let TotalIdade = 0
-
-Sangue.forEach(i => {
-    
-    TotalIdade += i.idade
-    
-})
-
-console.log(TotalIdade/Sangue.length)
+// Printando.
+console.log(`A idade média dessas pessoas é ${dados / pessoas.length}`);

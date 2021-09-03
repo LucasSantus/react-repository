@@ -1,11 +1,19 @@
-const pessoas = require('./Pessoas.json');
+// Importando pessoas.
+const pessoas = require('../pessoas.json');
 
-let MenorAltura = 1000000
-pessoas.forEach(i => {
+// Declarando objeto.
+let objeto = {
+    pessoa: "", altura: 0,
+}
 
-    if(MenorAltura>parseFloat(i.altura)){
-        MenorAltura=parseFloat(i.altura)
+// Verificando menor altura.
+pessoas.forEach(pessoa => {
+    if(objeto.altura == 0) objeto.altura = parseFloat(pessoa.altura);
+    if(objeto.altura > parseFloat(pessoa.altura)){
+        objeto.pessoa = pessoa.nome;
+        objeto.altura = parseFloat(pessoa.altura);
     }
-})
+});
 
-console.log(MenorAltura)
+// Printando.
+console.log(`${objeto.pessoa} é o mais baixo com ${objeto.altura}.`);
