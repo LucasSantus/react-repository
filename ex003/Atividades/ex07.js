@@ -2,16 +2,22 @@
 const pessoas = require('../pessoas.json');
 
 // Recuperando estados.
-let estados = pessoas.map(pessoa => {
+let estados = pessoas.map((pessoa) => {
     return pessoa.estado;
-}).filter((elemento, posicao, objeto) => {
-    return objeto.indexOf(elemento) === posicao;
-}).sort();
+});
+
+// Separando estados.
+let list_estados = []
+estados.forEach(i => {
+    if(!list_estados.includes(i)){
+        list_estados.push(i)
+    }
+})
 
 // Printando.
-estados.forEach(estado => {
-    let pessoas = pessoas.filter((pessoa)=>{
-        return pessoa.estado == estado;
+list_estados.forEach(i => {
+    let estado = pessoas.filter((pessoa)=>{
+        return pessoa.estado == i;
     });
-    console.log(`Há ${pessoas.length} pessoas no estado de ${estado}.`);
+    estado.length > 0 ? console.log(`Contém ${estado.length} pessoas no estado de ${i}.`) : console.log(`Não Contém pessoas no estado de ${i}.`);
 })
