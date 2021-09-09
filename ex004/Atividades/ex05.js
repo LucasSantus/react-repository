@@ -9,15 +9,15 @@ const rl = redline.createInterface({
 });
 
 // Validando data.
-rl.question("Insira a Data: ", resposta =>{
+rl.question("Insira o Nome do Feriado: ", resposta =>{
     is_valid = false;
 
     for(feriado of feriados){
-        if(resposta == feriado.date) is_valid = true
+        if(resposta == feriado.name) is_valid = true
     }
 
     // Printando.
-    is_valid ? console.log(`Feriado, Nome: ${feriado.name}`) : console.log(`Não tem feriados!`);
+    is_valid ? console.log(`Feriado, Data: ${feriado.date}`) : console.log(`Não tem feriados!`);
 
     // Fechando interface input.
     rl.close();
