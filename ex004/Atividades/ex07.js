@@ -1,7 +1,7 @@
-// Importando pessoas.
+// Importando veiculos.
 const veiculos = require('../Veiculos.json');
 
-// Separando estados.
+// Separando marcas.
 let list_marcas = []
 veiculos.forEach(i => {
     if(!list_marcas.includes(i.marca)){

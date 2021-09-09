@@ -1,4 +1,4 @@
-// Importando pessoas.
+// Importando veiculos.
 const veiculos = require('../Veiculos.json');
 
 // Declarando variaveis.

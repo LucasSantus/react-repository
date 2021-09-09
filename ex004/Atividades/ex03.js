@@ -1,4 +1,4 @@
-// Importando pessoas.
+// Importando feriados.
 const feriados = require('../Feriados.json');
 
 // Recuperando dados.
