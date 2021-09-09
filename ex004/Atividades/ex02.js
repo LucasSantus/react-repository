@@ -1,12 +1,10 @@
 // Importando pessoas.
 const feriados = require('../Feriados.json');
 
-// Separando estados.
-let list_estados = []
-feriados.forEach(i => {
-    if(!list_estados.includes(i)){
-        list_estados.push(i)
-    }
-})
-// Printando
-console.log(`Primeiro Feriado: ${ firstItem}`);
+// Pegando primeiro e ultimo feriado.
+first = feriados[0];
+last = feriados[feriados.length - 1];
+
+// Printando.
+console.log(`\nPrimeiro Feriado\nNome: ${first.name} || Tipo: ${first.type} || Data: ${first.date}`);
+console.log(`\nÚltimo Feriado\nNome: ${last.name} || Tipo: ${last.type} || Data: ${last.date}`);
