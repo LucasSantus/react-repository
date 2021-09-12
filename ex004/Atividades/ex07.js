@@ -8,7 +8,7 @@ veiculos.forEach(i => {
         list_marcas.push(i.marca);
         console.log(`${i.marca}`);
     }
-})
+});
 
 // Printando.
 console.log(`Existem ${list_marcas.length} marcas diferentes de carros.`);
