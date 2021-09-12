@@ -1,19 +1,12 @@
 // Importando veiculos.
 const veiculos = require('../Veiculos.json');
 
-// Declarando variaveis.
-let ano = 0;
-let car = ""
-
-// Verificando veiculo mais novo.
-veiculos.forEach(veiculo => {
-    ano_veiculo = parseFloat(veiculo.anoModelo);
-    if(ano == 0) ano = parseFloat(ano_veiculo);
-    if(ano > parseFloat(ano_veiculo)){
-        ano = parseFloat(ano_veiculo);
-        car = veiculo;
-    }
+// Ordenando veiculos por valor.
+i = veiculos.sort(function (a, b) {
+    if (a.anoModelo < b.anoModelo) { return 1; }
+    if (a.anoModelo > b.anoModelo) { return -1; }
+    return 0;
 });
 
 // Printando.
-console.log(`Ano ${ano}.`);
+console.log(`O carro mais antigo:\n${i[i.length - 1].marca} ${i[i.length - 1].modelo} - ${i[i.length - 1].anoModelo}`);
