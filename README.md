@@ -48,7 +48,7 @@ git clone git@github.com:LucasSantus/react-repository.git
 cd react-repository
 ```
 
-> **Observação:** Cada projeto tem uma finalidade diferente, portanto, ambos terão diferentes formas de instalação.
+> **Observação:** Cada projeto tem uma finalidade diferente, portanto, ambos terão diferentes formas de instalação e funcionamento.
 
 --------------------------------------------------------------------------------------
 
