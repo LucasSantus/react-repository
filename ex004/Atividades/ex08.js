@@ -1,28 +1,20 @@
-// // Importando veiculos.
-// const veiculos = require('../Veiculos.json');
+// Importando veiculos.
+const veiculos = require('../Veiculos.json');
 
-// // Declarando variaveis.
-// let objeto = {
-//     marca = "", media = 0.0, qtd_veiculos = 0,
-// }
+// Separando marcas.
+let list_fabricantes = []
+veiculos.forEach(i => { if(!list_fabricantes.includes(i.marca)){ list_fabricantes.push(i.marca); }});
 
-// // Separando marcas.
-// let list_marcas = []
-// veiculos.forEach(i => {
-//     if(!list_marcas.includes(i.marca)){
-//         list_marcas.push(i.marca);
-//     }
-// })
+console.log(`O valor total dos carros por fabricante:`);
 
-// list_marcas.forEach(marca => {
-//     veiculos.forEach(veiculo => {
-//         if(marca == veiculo.marca){
-//             objeto.marca = veiculo.marca;
-//             objeto.media = parseFloat(veiculo.valor.replace("R$ ", ""));
-//             objeto.qtd_veiculos += 1;
-//         }
-//     });
-// });
+// Filtrando e Printando fabricantes.
+list_fabricantes.forEach(fabricante => {
+    valor_total = 0.0;
 
-// // Printando.
-// console.log(`${car.modelo} é o carro mais caro, valendo: ${valor} reias.`);
+    fabricantes_filtrados = veiculos.filter(veiculo => { return veiculo.marca == fabricante; });
+
+    fabricantes_filtrados.forEach(a => { valor_total += parseFloat(a.valor.replace("R$ ", "")) });
+
+    // Printando.
+    console.log(`\n${fabricante} - ${valor_total / fabricantes_filtrados.length}`);
+})
