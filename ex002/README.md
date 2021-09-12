@@ -2,7 +2,15 @@
 
 --------------------------------------------------------------------------------------
 
-<h3 id="rodando">:zap: Rodando</h3>
+<h3>:information_source: IMC</h3>
+
+A ideia é:
+
+_"Fazer calculo mais avançado do IMC das pessoas."_
+
+--------------------------------------------------------------------------------------
+
+<h3>:zap: Rodando</h3>
 
 ```
 node app.js
